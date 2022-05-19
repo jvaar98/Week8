@@ -15,7 +15,7 @@ namespace PickRandomFromFile
             Console.WriteLine($"Täna sa sööd {randomFood}, ning selle kõrvale jood {randomDrink} ning samal ajal vaatada {randomMovie}");
 
 
-            string filePath = @"C:\Users\...\Samples\foods.txt";
+            string filePath = @"/Users/jaagupvaar/Desktop/foods.txt";
 
             string[] dataFromFile = File.ReadAllLines(filePath);
 
@@ -28,7 +28,7 @@ namespace PickRandomFromFile
         }
         private static string GetRandomFromFile(string fileName)
         {
-            string filePath = $@"C:\Users\...\Samples\{fileName}";
+            string filePath = $@"/Users/jaagupvaar/Desktop/{fileName}";
             string[] dataFromFile = File.ReadAllLines(filePath);
             string randomElement = dataFromFile[GenerateRandomIndex(dataFromFile)];
             return randomElement;

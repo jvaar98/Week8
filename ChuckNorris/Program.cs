@@ -12,7 +12,7 @@ namespace ChuckNorris
 
             Console.WriteLine($"Üks Chuck N naljadest kõlab :{randomJoke} .");
 
-            string filePath = @"C:\Users\...\Samples\foods.txt";
+            string filePath = @"/Users/jaagupvaar/Desktop/chuck.txt";
 
             string[] dataFromFile = File.ReadAllLines(filePath);
         }
@@ -24,7 +24,7 @@ namespace ChuckNorris
         }
         private static string GetRandomFromFile(string fileName)
         {
-            string filePath = $@"C:\Users\...\Samples\{fileName}";
+            string filePath = $@"/Users/jaagupvaar/Desktop/{fileName}";
             string[] dataFromFile = File.ReadAllLines(filePath);
             string randomElement = dataFromFile[GenerateRandomIndex(dataFromFile)];
             return randomElement;
